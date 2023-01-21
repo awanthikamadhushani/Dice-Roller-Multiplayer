@@ -17,7 +17,7 @@ var cookieParser = require("cookie-parser");
 var setUpPassport = require("./setuppassport");
 var flash = require("connect-flash");
 
-// Set static folder
+// Set static folder 
 app.use(express.static("public"));
 
 // Socket setup

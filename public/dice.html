@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Roller Multiplayer</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.ef46db3751d8e999.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="shortcut icon" href="1.png">
+  
+</head>
+
+<div class="topnav" id="myTopnav">
+  <a class="active">Dice Roller Multiplayer</a>
+  <a href="#about">About</a>
+  <a href="">Instructions</a>
+  <a href="#msgadd">Chat Application</a>
+  <a href="dice.html">New Game</a>
+  <a href="/logout">Logout</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<body>
+  
+
+  <app-root></app-root>
+    <ngx-ui-loader fgssize="75" [fgstype]="SPINNER.wanderingCubes"></ngx-ui-loader>
+  <script src="runtime.755ca2ad3607a7f2.js" type="module"></script><script src="polyfills.07f619d4921efb7a.js" type="module"></script><script src="main.c7fa1be5fc07b1ae.js" type="module"></script>  
+  <ul>
+    <li class="nav-item">
+    </li>
+  </ul>
+  <div class="board"></div>
+  <img src="images/red_piece.png" hidden="true" id="red-piece" />
+  <img src="images/blue_piece.png" hidden="true" id="blue-piece" />
+
+  <div class="container" style="z-index: -1;">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="info-box">
+    <div class="form-group">
+      <input type="text" class="form-input" id="name" placeholder="Enter Your Name" required />
+      <button class="btn draw-border" id="start-btn">Join</button>
+    </div>
+  </div>
+  <div id="players-box">
+    <h4>Players Currently Online:</h4>
+    <br>
+    <table id="players-table"></table>
+  </div>
+  <div id="current-player"></div>
+  <button class="btn draw-border" id="roll-button" hidden>Roll</button>
+  <div class="dice">
+    <img src="./images/dice/dice1.png" alt="" id="dice" />
+
+  </div>
+  <div style="color: rgb(0, 0, 0);">
+
+  </div>
+
+  <p id="user"> </p>
+
+  <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
+    <div class="" style="padding: 60px;">
+      <h2 id="player1">Player 1</h2>
+      <h2 id="score-0"></h2>
+    </div>
+    <div style="padding: 60px;">
+      <h2 id="player2">Player 2</h2>
+      <h2 id="score-1"></h2>
+    </div>
+  </div>
+ 
+  <h2 style="padding: 60px;">Chat Box</h2>
+  <hr style="height:5pt; visibility:hidden;" />
+      <div style="padding: 60px;" id="msgwrap"></div>
+      <form style="padding: 40px;" id="sender">
+        <input placeholder="Enter Your Message" style="padding: 18px;" type="text" id="msgadd">
+        <button class="btn draw-border" type="submit" id="sendbtn">Send</button>
+      </form>
+
+  <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
+    <div class="" style="padding: 60px;">
+      
+    </div>
+  </div>
+  <hr style="height:5pt; visibility:hidden;" />
+  <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
+    <div class="" style="margin-top:20px; padding:60px">
+      <h1  id="about" style="text-align: center;">About The Game</h1>
+      <hr style="height:18pt; visibility:hidden;" />
+      <div class="row">
+        <div class="col-lg-04 mx-auto">
+          <p style="text-align: justify; font-size: larger;" class="lead">Dice (singular die or dice) are small, throwable objects with
+            marked sides that can rest in multiple positions. They are used for generating random values, commonly as
+            part of tabletop games, including dice games, board games, role-playing games, and games of chance.
+            <br>
+            <br>
+            A traditional die is a cube with each of its six faces marked with a different number of dots (pips) from one
+            to six. When thrown or rolled, the die comes to rest showing a random integer from one to six on its upper
+            surface, with each value being equally likely. Dice may also have polyhedral or irregular shapes, may have
+            faces marked with numerals or symbols instead of pips and may have their numbers carved out from the
+            material of the dice instead of marked on it. Loaded dice are designed to favor some results over others for
+            cheating or entertainment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="height:5pt; visibility:hidden;" />
+  <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
+    <div class="" style="margin-top:30px; padding:60px">
+      <h1 style="text-align: center;">The Developer</h1>
+      <hr style="height:18pt; visibility:hidden;" />
+      <div class="row">
+        <div class="col-lg-04 mx-auto">
+          <p style="text-align: justify; font-size: larger;" class="lead">Dice (singular die or dice) are small, throwable objects with
+            marked sides that can rest in multiple positions. They are used for generating random values, commonly as
+            part of tabletop games, including dice games, board games, role-playing games, and games of chance.
+            <br>
+            <br>
+            A traditional die is a cube with each of its six faces marked with a different number of dots (pips) from one
+            to six. When thrown or rolled, the die comes to rest showing a random integer from one to six on its upper
+            surface, with each value being equally likely. Dice may also have polyhedral or irregular shapes, may have
+            faces marked with numerals or symbols instead of pips and may have their numbers carved out from the
+            material of the dice instead of marked on it. Loaded dice are designed to favor some results over others for
+            cheating or entertainment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<input type="number" id="maxscore"/>-->
+
+  <button class="btn draw-border" id="restart-btn" hidden>Restart</button>
+  
+
+  <div class="footer">
+    <p style="align-items: center; margin: 8px; ;"> <b>Copyright © 2023 Dice Roller All Rights Reserved</b></p>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/index.js"></script>
+ 
+</body>
+
+</html>

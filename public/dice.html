@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="styles.ef46db3751d8e999.css">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="shortcut icon" href="1.png">
-  
+
 </head>
 
 <div class="topnav" id="myTopnav">
   <a class="active">Dice Roller Multiplayer</a>
   <a href="#about">About</a>
-  <a href="">Instructions</a>
+  <a href="#instructions">Instructions</a>
   <a href="#msgadd">Chat Application</a>
   <a href="dice.html">New Game</a>
   <a href="/logout">Logout</a>
@@ -26,11 +26,13 @@
 </div>
 
 <body>
-  
+
 
   <app-root></app-root>
-    <ngx-ui-loader fgssize="75" [fgstype]="SPINNER.wanderingCubes"></ngx-ui-loader>
-  <script src="runtime.755ca2ad3607a7f2.js" type="module"></script><script src="polyfills.07f619d4921efb7a.js" type="module"></script><script src="main.c7fa1be5fc07b1ae.js" type="module"></script>  
+  <ngx-ui-loader fgssize="75" [fgstype]="SPINNER.wanderingCubes"></ngx-ui-loader>
+  <script src="runtime.755ca2ad3607a7f2.js" type="module"></script>
+  <script src="polyfills.07f619d4921efb7a.js" type="module"></script>
+  <script src="main.c7fa1be5fc07b1ae.js" type="module"></script>
   <ul>
     <li class="nav-item">
     </li>
@@ -75,38 +77,40 @@
       <h2 id="score-1"></h2>
     </div>
   </div>
- 
+
   <h2 style="padding: 60px;">Chat Box</h2>
   <hr style="height:5pt; visibility:hidden;" />
-      <div style="padding: 60px;" id="msgwrap"></div>
-      <form style="padding: 40px;" id="sender">
-        <input placeholder="Enter Your Message" style="padding: 18px;" type="text" id="msgadd">
-        <button class="btn draw-border" type="submit" id="sendbtn">Send</button>
-      </form>
+  <div style="padding: 60px;" id="msgwrap"></div>
+  <form style="padding: 40px;" id="sender">
+    <input placeholder="Enter Your Message" style="padding: 18px;" type="text" id="msgadd">
+    <button class="btn draw-border" type="submit" id="sendbtn">Send</button>
+  </form>
 
   <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
     <div class="" style="padding: 60px;">
-      
+
     </div>
   </div>
   <hr style="height:5pt; visibility:hidden;" />
   <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
     <div class="" style="margin-top:20px; padding:60px">
-      <h1  id="about" style="text-align: center;">About The Game</h1>
+      <h1 id="about" style="text-align: center;">About The Game</h1>
       <hr style="height:18pt; visibility:hidden;" />
       <div class="row">
-        <div class="col-lg-04 mx-auto">
-          <p style="text-align: justify; font-size: larger;" class="lead">Dice (singular die or dice) are small, throwable objects with
+          <p style="text-align: justify; font-size: larger;" class="lead">Dice (singular die or dice) are small,
+            throwable objects with
             marked sides that can rest in multiple positions. They are used for generating random values, commonly as
             part of tabletop games, including dice games, board games, role-playing games, and games of chance.
             <br>
             <br>
-            A traditional die is a cube with each of its six faces marked with a different number of dots (pips) from one
+            A traditional die is a cube with each of its six faces marked with a different number of dots (pips) from
+            one
             to six. When thrown or rolled, the die comes to rest showing a random integer from one to six on its upper
             surface, with each value being equally likely. Dice may also have polyhedral or irregular shapes, may have
             faces marked with numerals or symbols instead of pips and may have their numbers carved out from the
             material of the dice instead of marked on it. Loaded dice are designed to favor some results over others for
-            cheating or entertainment.</p>
+            cheating or entertainment.
+          </p>
         </div>
       </div>
     </div>
@@ -115,21 +119,24 @@
   <hr style="height:5pt; visibility:hidden;" />
   <div style="display: flex; color: rgb(0, 0, 0); font-size: medium;  ">
     <div class="" style="margin-top:30px; padding:60px">
-      <h1 style="text-align: center;">The Developer</h1>
+      <h1 id="instructions" style="text-align: center;">Instruction</h1>
       <hr style="height:18pt; visibility:hidden;" />
       <div class="row">
         <div class="col-lg-04 mx-auto">
-          <p style="text-align: justify; font-size: larger;" class="lead">Dice (singular die or dice) are small, throwable objects with
-            marked sides that can rest in multiple positions. They are used for generating random values, commonly as
-            part of tabletop games, including dice games, board games, role-playing games, and games of chance.
+          <p style="text-align: justify; font-size: larger;" class="lead">The dice roller game is a multiplayer game
+            that can be paly with the opposite partner and win from chance and high scores.
+            Dice is a throwable object with sides marked in various places. Here it contains dots (1-6) digits of
+            numbering value. They are commonly used in dice games, board games, role playing games, and random number
+            games. These are also used in tabletop games. So, the top 2D view will be designed in the web-application.
+            The user can play with a multiplayer functionality. 
+
             <br>
             <br>
-            A traditional die is a cube with each of its six faces marked with a different number of dots (pips) from one
-            to six. When thrown or rolled, the die comes to rest showing a random integer from one to six on its upper
-            surface, with each value being equally likely. Dice may also have polyhedral or irregular shapes, may have
-            faces marked with numerals or symbols instead of pips and may have their numbers carved out from the
-            material of the dice instead of marked on it. Loaded dice are designed to favor some results over others for
-            cheating or entertainment.</p>
+            During the competition, the competitor who gets the maximum first wins. Two people compete at the same time
+            and after one win, the playoff will start. The appearance of the scoreboard next to the interface makes the
+            game easier. In addition, a chat box is available for all players. Therefore, when two players are
+            competing, other players can connect and communicate with each other.
+          </p>
         </div>
       </div>
     </div>
@@ -138,14 +145,14 @@
   <!--<input type="number" id="maxscore"/>-->
 
   <button class="btn draw-border" id="restart-btn" hidden>Restart</button>
-  
+
 
   <div class="footer">
-    <p style="align-items: center; margin: 8px; ;"> <b>Copyright © 2023 Dice Roller All Rights Reserved</b></p>
+    <p style="align-items: center; margin: 4px; ;"> <b><br>Copyright © 2023 Dice Roller All Rights Reserved<br></b></p>
   </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/index.js"></script>
- 
+
 </body>
 
 </html>

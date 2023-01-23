@@ -1,10 +1,10 @@
 {
-  "name": "mult-snakes-and-ladders",
+  "name": "dicerollergame",
   "version": "1.0.0",
   "description": "",
   "main": "game.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 10000",
     "start": "node server.js"
   },
   "author": "",
@@ -14,12 +14,16 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
     "bootstrap": "^5.3.0-alpha1",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "cookies": "^0.8.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "http": "0.0.1-security",
+    "mocha": "^10.2.0",
     "mongoose": "^6.8.3",
     "ngx-spinner": "^15.0.1",
     "nodemon": "^2.0.20",
@@ -27,6 +31,7 @@
     "passport-local": "^1.0.0",
     "save": "^2.9.0",
     "session": "^0.1.0",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
   }
 }

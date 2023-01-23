@@ -5,14 +5,11 @@ const msgwrap=document.getElementById('msgwrap');
 const sendform=document.getElementById('sender');
 const msgadd=document.getElementById('msgadd');
 
-
-
 function messenger(message){
   const msgg=document.createElement('div');
   msgg.innerText=message;
   msgwrap.append(msgg);
 
- 
   //var content = document.createTextNode(message);
   //msgwrap.appendChild(content);
 
@@ -226,3 +223,4 @@ function myFunction() {
   }
 }
 
+module.exports.rollDice = rollDice

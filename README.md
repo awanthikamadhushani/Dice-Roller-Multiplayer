@@ -1,5 +1,7 @@
 # Dice Roller Multiplayer
 
+![dice (1)](https://user-images.githubusercontent.com/100335819/214075845-6edd3c34-8a82-49d8-8b59-7cc084dea3c3.png)
+
 ## About Dice Roller
 
 Dice (singular die or dice) are small, throwable objects with marked sides that can rest in multiple positions. They are used for generating random values, commonly as part of tabletop games, including dice games, board games, role-playing games, and games of chance.

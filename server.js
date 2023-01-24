@@ -26,12 +26,10 @@ const io = socket(server);
 // Players array
 let users = [];
 
-//const { rest } = require('lodash');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 io.on("connection", (socket) => {
   console.log("Made socket connection", socket.id);
-//socket.emit("cmsg",'oi')
 
   socket.on("msg",message=>{
 socket.broadcast.emit('cmsg',message)
@@ -96,10 +94,6 @@ app.use(function (req, res, next) {
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-//server.listen(app.get("port"), () => {
-  //console.log("Now listening on port " + app.get("port"));
-//});
-
 /* User Login */
 app.post("/login", passport.authenticate("user", {
   successRedirect: "/dice.html",
@@ -108,7 +102,6 @@ app.post("/login", passport.authenticate("user", {
 }));
 
 app.post("/signup", function (req, res, next) {
-  //var mod = new model(req.body);
 
   User.findOne({ email: req.body.email }, function (err, user) {
       if (err) { return next(err); }

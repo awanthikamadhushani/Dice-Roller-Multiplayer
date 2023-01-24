@@ -7,6 +7,11 @@ chai.use(chaiHttp)
 let should = chai.should()
 
 describe('user', () => {
+
+    after(() => {
+        process.exit();
+    });
+
     let logingdata = {
         username: 'awanthika',
         password: '123'

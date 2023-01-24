@@ -1,9 +1,3 @@
-/*!
- * EJS - Filters
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
 /**
  * First element of the target `obj`.
  */

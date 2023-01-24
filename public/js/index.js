@@ -10,9 +10,6 @@ function messenger(message){
   msgg.innerText=message;
   msgwrap.append(msgg);
 
-  //var content = document.createTextNode(message);
-  //msgwrap.appendChild(content);
-
 }
 
 socket.on('cmsg',msg=>{
@@ -26,8 +23,6 @@ sendform.addEventListener('submit',e=>{
   socket.emit('msg',msg)
   msgadd.value=''
 })
-
-
 
 let players = []; // All players in the game
 let currentPlayer; // Player object for individual players
@@ -46,12 +41,6 @@ const offsetY = side / 2 + 20;
 
 
 const images = [redPieceImg, bluePieceImg];
-
-/*const ladders = [
-];
-const snakes = [
-];*/
-
 class Player {
   constructor(id, name, pos, img) {
     this.id = id;
@@ -59,45 +48,12 @@ class Player {
     this.pos = pos;
     this.img = img;
   }
-
-  /*draw() {
-    let xPos =
-      Math.floor(this.pos / 10) % 2 == 0
-        ? (this.pos % 10) * side - 15 + offsetX
-        : canvas.width - ((this.pos % 10) * side + offsetX + 15);
-    let yPos = canvas.height - (Math.floor(this.pos / 10) * side + offsetY);
-
-    let image = new Image();
-    image.src = this.img;
-    ctx.drawImage(image, xPos, yPos, 30, 40);
-  }*/
-
+  
   updatePos(num) {
     if (this.pos + num <= 99) {
       this.pos += num;
-      //this.pos = this.isLadderOrSnake(this.pos + 1) - 1;
     }
   }
-
-  /*isLadderOrSnake(pos) {
-    let newPos = pos;
-
-    for (let i = 0; i < ladders.length; i++) {
-      if (ladders[i][0] == pos) {
-        newPos = ladders[i][1];
-        break;
-      }
-    }
-
-    for (let i = 0; i < snakes.length; i++) {
-      if (snakes[i][0] == pos) {
-        newPos = snakes[i][1];
-        break;
-      }
-    }
-
-    return newPos;
-  }*/
 }
 
 document.getElementById("start-btn").addEventListener("click", () => {
@@ -127,14 +83,6 @@ function rollDice() {
   return number;
 }
 
-/*function drawPins() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  players.forEach((player) => {
-    player.draw();
-  });
-}*/
-
 // Listen for events
 socket.on("join", (data) => {
   
@@ -142,7 +90,6 @@ socket.on("join", (data) => {
   document.getElementById("start-btn").setAttribute("disabled")}
   else {document.getElementById("start-btn").disabled=false
   players.push(new Player(players.length, data.name, data.pos, data.img));
-  //drawPins();
 
   document.getElementById(
     "players-table"
@@ -162,15 +109,12 @@ socket.on("joined", (data) => {
       "players-table"
     ).innerHTML += `<tr><td>${player.name}</td><td><img src=${player.img}></td></tr>`;
   });
-  //drawPins();
 });
 
 socket.on("rollDice", (data, turn) => {
   players[data.id].updatePos(data.num);
-  //console.log(data.num)
   document.getElementById("dice").src = `./images/dice/dice${data.num}.png`;
 
-  //drawPins();
   if (turn != currentPlayer.id) {
     document.getElementById("roll-button").hidden = true;
     document.getElementById(
@@ -188,7 +132,6 @@ socket.on("rollDice", (data, turn) => {
     document.getElementById("score-0").innerHTML= players[0].pos;
     document.getElementById("score-1").innerHTML= players[1].pos;
     console.log(i)
-    //var maxscore = document.getElementById("maxscore").value;
     if (players[i].pos >= 30) {
       winner = players[i];
       break;
